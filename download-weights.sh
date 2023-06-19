@@ -2,7 +2,7 @@
 
 if [ "$#" -ne 1 ]; then
     echo "./download-weights.sh <model>"
-    echo "Possibile <model> are: StyleGAN2-ffhq, StyleGAN2-church, StyleGAN2-car, GPT2"
+    echo "Possible <model> are: StyleGAN2-ffhq, StyleGAN2-church, StyleGAN2-car, GPT2"
     echo "Example:"
     echo "./download-weights.sh StyleGAN2-ffhq"
     exit

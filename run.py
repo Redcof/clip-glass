@@ -4,8 +4,8 @@ import torch
 import numpy as np
 import pickle
 from pymoo.optimize import minimize
-from pymoo.algorithms.so_genetic_algorithm import GA
-from pymoo.factory import get_algorithm, get_decision_making, get_decomposition
+# from pymoo.algorithms.so_genetic_algorithm import GA
+from pymoo.factory import get_algorithm, get_decision_making
 from pymoo.visualization.scatter import Scatter
 
 from config import get_config
@@ -106,6 +106,7 @@ else:
     try:
         result = get_decision_making("pseudo-weights", [0, 1]).do(res.F)
     except:
+        from pymoo.factory import get_decomposition
         print("Warning: cant use pseudo-weights")
         result = get_decomposition("asf").do(res.F, [0, 1]).argmin()
 
